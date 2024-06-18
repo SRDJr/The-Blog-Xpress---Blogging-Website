@@ -1,0 +1,116 @@
+/* Fonts */
+@font-face {
+    font-family: 'Algerian';
+    src: url('./algeria-font/Algeria-mZ9.ttf') format('truetype');
+    /* Add additional src lines for other font formats if available */
+}
+
+@font-face {
+    font-family: 'Chomsky';
+    src: url('./chomsky/Chomsky.otf') format('truetype');
+    /* Add additional src lines for other font formats if available */
+}
+
+.unifrakturcook-bold {
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blog-header-logo {
+    font-family: "Chomsky", "UnifrakturCook", "Algerian", "Playfair Display", Georgia, "Times New Roman", serif
+        /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+    ;
+    font-size: 3.25rem;
+}
+
+
+/* Light mode styles */
+.light-mode .nav-link,
+.light-mode .btn {
+    color: #343a40;
+    /* Dark color */
+}
+
+.light-mode .btn {
+    --bs-btn-border-color: #343a40;
+    /* Dark color for the outline */
+}
+
+.light-mode .btn-primary {
+    color: white;
+}
+
+/* Custom CSS to change background color and text color for the second button */
+.light-mode .btn-primary:nth-child(2) {
+    --bs-btn-bg: #343a40;
+    /* Dark color for the background */
+    --bs-btn-color: #fff;
+    /* White color for the text */
+    --bs-btn-border-color: #343a40;
+    /* Dark color for the outline */
+}
+
+/* Additional CSS to change focus outline color for btn-primary */
+.light-mode .btn-primary:not(:disabled):not(.disabled):active:focus,
+.light-mode .btn-primary:not(:disabled):not(.disabled).active:focus,
+.light-mode .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+    /* Darker outline color for focus */
+}
+
+.featured-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.carousel-control-prev.external-control,
+.carousel-control-next.external-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5%;
+    /* Adjust width as necessary */
+    height: 100%;
+}
+
+.carousel-control-prev.external-control {
+    left: -5%;
+    /* Adjust to move arrow outside the content */
+}
+
+.carousel-control-next.external-control {
+    right: -5%;
+    /* Adjust to move arrow outside the content */
+}
+
+.carousel-indicators button {
+    background-color: #6c757d; /* Gray color suitable for both light and night modes */
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: transparent; /* Remove background box */
+    border: none;
+    filter: invert(50%); /* Adjust to make the icon visible, use white color for dark background or black for light background */
+  }
+  
+  .carousel-control-prev-icon::after,
+  .carousel-control-next-icon::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+  }
+
+  .carousel-control-prev-icon::after {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%27http%3A//www.w3.org/2000/svg%27 fill%3D%27%236c757d%27 viewBox%3D%270 0 8 8%27%3E%3Cpath d%3D%27M4.5 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z%27/%3E%3C/svg%3E'); /* Custom arrow icon for prev */
+  }
+
+  .carousel-control-next-icon::after {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns%3D%27http%3A//www.w3.org/2000/svg%27 fill%3D%27%236c757d%27 viewBox%3D%270 0 8 8%27%3E%3Cpath d%3D%27M3.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z%27/%3E%3C/svg%3E'); /* Custom arrow icon for next */
+  }
+
